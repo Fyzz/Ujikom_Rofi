@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Kalkulator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("path/to/your/background.jpg");  background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 400px;
+            background-color: rgba(189, 215, 216, 0.8);  border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-form {
+            text-align: center;
+        }
+
+        .login-form h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 15px;
+        }
+
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-field {
+            margin-bottom: 15px;
+        }
+
+        .checkbox-field input[type="checkbox"] {
+            vertical-align: middle;
+        }
+
+        .checkbox-field label {
+            margin-left: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #45A049;
+        }
+
+        .forgot-password {
+            color: #999;
+            text-decoration: underline;
+            font-size: 12px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <form action="index.html">
+                <div class="input-field">
+                    <label for="username">Username or Email</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username or email" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="checkbox-field">
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    <label for="remember_me">Remember Me</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('login-form');
+    
+        form.addEventListener('submit', (event) => {
+          event.preventDefault(); // Prevent default form submission
+    
+          const username = document.querySelector('input[name="username"]').value;
+          const password = document.querySelector('input[name="password"]').value;
+    
+          // Simulate login process (replace with actual validation)
+          if (username === 'admin' && password === 'password') {
+            alert('Login successful!');
+          } else {
+            alert('Invalid username or password!');
+          }
+        });
+      </script>
+</body>
+</html>
